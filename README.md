@@ -1,2 +1,2 @@
 # scara-virtutilor
-These are my study-notes about the ”Ladder of divine ascent”, by Saint John Climacus
+Notițe mele de studiu asupra lucrării ”Scara” de Sfântul Ioan Scărarul 
