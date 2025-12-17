@@ -116,7 +116,7 @@
     }
     
     .underline {
-       margin-bottom: 1.2rem
+       margin-bottom: 1.2rem;
        padding-bottom: 0.8rem;
        border-bottom: 0.6px solid #999; 
        display: inline-block;
@@ -148,6 +148,7 @@
     column-gap: 0.75rem;
     align-items: start;
   }
+    
    ul li::before {
     display: none;        /* hide bullet on phone */
     }
@@ -169,10 +170,6 @@
       text-align: center; /* keep your centered style on mobile */
     }
     
-    .lesson-code br {
-    display: none;
-  }
-    
     .lesson-code {
     font-weight: bold;
     text-align: right;
@@ -187,8 +184,15 @@
       display: block;
   }
   
+  .lesson-code,
+  .lesson-title {
+    display: block;
+  }
 
-    
+  .lesson-code br {
+    display: none;
+  }
+
 }
 </style>
 </head>
