@@ -58,6 +58,21 @@
     top: 0.2em;
     font-weight: bold;
   }
+  
+      /* Desktop: three columns */
+  .treapta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 16px; /* space between items */
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  /* Keep your existing li styles, but remove text-align for desktop */
+  .treapta-grid li {
+    text-align: left; /* make sure text is aligned properly */
+    margin: 0; /* handled by grid gap */
+  }
 
   a {
     display: inline-block;      /* better tap targets */
@@ -127,8 +142,20 @@
       column-gap: 0.75rem;
       align-items: start;
       text-align: left;
+    } 
+      
+  @media (max-width: 600px) {
+         
+    .treapta-grid {
+      grid-template-columns: 1fr; /* single column on mobile */
+      gap: 12px;
     }
-  
+    
+    .treapta-grid li {
+      text-align: center; /* keep your centered style on mobile */
+    }
+  }
+
     .lesson-code {
       font-weight: bold;
       text-align: right;
@@ -145,7 +172,7 @@
 </head>
 <body>
     <h1>Scara virtuților (notițe de studiu)</h1>
-<ul>
+<ul class="treapta-grid">
    
         <li>
             <a href="Treapta 1- A renunta la.pdf" target="_blank">
