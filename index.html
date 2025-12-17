@@ -2,99 +2,313 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scara</title>
   <style>
+  /* Base styles */
+  body {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 16px;
+    background: #f9f9f9;
+    color: #333;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.4rem;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 2.2rem;
+    margin-bottom: 0.8rem;
+    color: #444;
+    border-left: 5px solid #6c757d;
+    padding-left: 10px;
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  ul li {
+    margin: 14px 0;
+    padding-left: 22px;
+    position: relative;
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  ul li::before {
+    content: "•";
+    color: #6c757d;
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    font-weight: bold;
+  }
+
+  a {
+    display: inline-block;      /* better tap targets */
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+    padding: 4px 0;
+  }
+
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  .lesson-code,
+  .lesson-title {
+  display: inline;
+}
+
+  /* 📱 Mobile-specific adjustments */
+  @media (max-width: 600px) {
     body {
-      font-family: 'Georgia', serif;
-      font-size: 16px;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: #f9f9f9;
-      color: #333;
+      font-size: 15px;
+      padding: 0 14px;
     }
 
     h1 {
-      font-size: 2.0rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.3rem;
-      font-weight: normal;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 2.5rem;
-      margin-bottom: 0.8rem;
-      color: #444;
-      border-left: 5px solid #6c757d;
-      padding-left: 10px;
-      font-weight: normal;
-    }
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      margin: 12px 0;
-      padding-left: 20px;
-      position: relative;
-      font-size: 1rem;
-    }
-
-    ul li::before {
-      content: "•";
-      color: #6c757d;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      font-weight: bold;
-    }
-
-    a {
-      text-decoration: none;
-      color: #007bff;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #0056b3;
-      text-decoration: underline;
+      font-size: 1.9rem;
     }
     
-  </style>
+    .underline {
+       margin-bottom: 1.2rem
+       padding-bottom: 0.8rem;
+       border-bottom: 0.6px solid #999; 
+       display: inline-block;
+    }
+    
+    h2 {
+      font-size: 1.6rem;
+      text-align: center;
+      border-left: none;      /* just in case */
+      padding-left: 0;
+      border-bottom: 2px solid #ccc; /* same as h1 underline */
+      padding-bottom: 0.4rem;
+    }
+
+    h1,
+    h2 {
+      text-align: center;  
+      border-left: none;
+      padding-left: 0;
+    }
+    
+   ul li {
+      font-size: 0.95rem;
+      text-align: center;   /* center text on phone */
+      padding-left: 0;      /* remove left offset */
+    } 
+    
+   ul li::before {
+    display: none;        /* hide bullet on phone */
+    }
+      
+    ul li a {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr; /* left = codes, right = text */
+      column-gap: 0.75rem;
+      align-items: start;
+      text-align: left;
+    }
+  
+    .lesson-code {
+      font-weight: bold;
+      text-align: right;
+      white-space: nowrap;
+      font-size: 1.2rem; 
+    }
+  
+    .lesson-title {
+      text-align: left;
+      font-size: 1.2rem;  
+  }
+}
+</style>
 </head>
 <body>
     <h1>Scara virtuților (notițe de studiu)</h1>
-    <li><a href="Treapta 1- A renunta la.pdf" target="_blank">Treapta 1 - A renunța la </a></li>
-    <li><a href="Treapta 2- A te detasa de.pdf" target="_blank">Treapta 2 - A te detașa de </a></li>
-    <li><a href="Treapta 3- A fi strain de.pdf" target="_blank">Treapta 3 - A fi străin de </a></li>
-    <li><a href="Treapta 4- A asculta.pdf" target="_blank">Treapta 4 - A asculta </a></li>
-    <li><a href="Treapta 5 -A te fi intors de la.pdf" target="_blank">Treapta 5 - A te fi întors de la </a></li>
-    <li><a href="Treapta 6- A afirma valoarea timpului existential.pdf" target="_blank">Treapta 6 - A afirma valoarea timpului existențial </a></li>
-    <li><a href="Treapta 7-A-i fi dor dupa.pdf" target="_blank">Treapta 7 - A-i fi dor după </a></li>
-    <li><a href="Treapta 8-A fi nemiscat de.pdf" target="_blank">Treapta 8 - A fi nemișcat de </a></li>
-    <li><a href="Treapta 9-A ierta cuiva.pdf" target="_blank">Treapta 9 - A ierta cuiva</a></li>
-    <li><a href="Treapta 10-A nejudeca pe celalalt.pdf" target="_blank">Treapta 10 - A nejudeca pe celălalt </a></li>
-    <li><a href="Treapta 11-A tacea stiind.pdf" target="_blank">Treapta 11 - A tăcea știind </a></li>
-    <li><a href="Treapta 12-A trai realitatea.pdf" target="_blank">Treapta 12 - A trăi realitatea</a></li>
-    <li><a href="Treapta 13-A lucra sufleteste barbateste continuu.pdf" target="_blank">Treapta 13 - A lucra sufletește bărbătește continuu</a></li>
-    <li><a href="Treapta 14-A te infrana de la.pdf" target="_blank">Treapta 14 - A te înfrâna </a></li>
-    <li><a href="Treapta 15-A te curati de.pdf" target="_blank">Treapta 15 - A te curăți de </a></li>
-    <li><a href="Treapta 16-A fi fara griji lumesti.pdf" target="_blank">Treapta 16 - A fi fără griji lumești</a></li>
-    <li><a href="Treapta 17-A nu-i fi rusine de.pdf" target="_blank">Treapta 17 - A-i fi rușine de </a></li>
-    <li><a href="Treapta 18-A dormi, a se ruga, a canta in obste.pdf" target="_blank">Treapta 18 - A dormi, a te ruga, a cânta în obște  </a></li>
-    <li><a href="Treapta 19-A priveghea.pdf" target="_blank">Treapta 19 - A priveghea </a></li>
-    <li><a href="Treapta 20- A fi curajos in fata.pdf" target="_blank">Treapta 20 - A fi curajos față de </a></li>
-    <li><a href="Treapta 21- A se regasi deplin pe sine.pdf" target="_blank">Treapta 21 - A fi nesuperficial, a se regasi deplin pe sine </a></li>
-    <li><a href="Treapta 22 - A se defaima inaintea Domnului.pdf" target="_blank">Treapta 22 - A se defăima înaintea lui Dumnezeu</a></li>
-    <li><a href="Treapta 23 - A dispretui hulirea, a neosandi pe celalalt.pdf" target="_blank">Treapta 23 - A disprețui hulirea, a neosândi pe celălalt</a></li>
+<ul>
+   
+        <li>
+            <a href="Treapta 1- A renunta la.pdf" target="_blank">
+                <span class="lesson-code">Treapta 1</span>
+                <span class="lesson-title">A renunța la</span>
+            </a>
+        </li>
 
+         <li>
+            <a href="Treapta 2- A te detasa de.pdf" target="_blank">
+                <span class="lesson-code">Treapta 2</span>
+                <span class="lesson-title">A te detașa de</span>
+            </a>
+        </li>
 
+         <li>
+            <a href="Treapta 3- A fi strain de.pdf" target="_blank">
+                <span class="lesson-code">Treapta 3</span>
+                <span class="lesson-title">A fi străin de</span>
+            </a>
+        </li>
+  
+       <li>
+            <a href="Treapta 4- A asculta.pdf" target="_blank">
+                <span class="lesson-code">Treapta 4</span>
+                <span class="lesson-title">A asculta</span>
+            </a>
+        </li>
+  
+       <li>
+            <a href="Treapta 5 -A te fi intors de la.pdf" target="_blank">
+                <span class="lesson-code">Treapta 5</span>
+                <span class="lesson-title">A te fi întors de la</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="Treapta 6- A afirma valoarea timpului existential.pdf" target="_blank">
+                <span class="lesson-code">Treapta 6</span>
+                <span class="lesson-title">A afirma valoarea timpului existențial</span>
+            </a>
+        </li>
+  
+        <li>
+            <a href="Treapta 7-A-i fi dor dupa.pdf"  target="_blank">
+                <span class="lesson-code">Treapta 7</span>
+                <span class="lesson-title">A-i fi dor după</span>
+            </a>
+        </li>
+  
+         <li>
+            <a href="Treapta 8-A fi nemiscat de.pdf"  target="_blank">
+                <span class="lesson-code">Treapta 8</span>
+                <span class="lesson-title">A fi nemișcat de</span>
+            </a>
+        </li>
+   
+        <li>
+            <a href="Treapta 9-A ierta cuiva.pdf"  target="_blank">
+                <span class="lesson-code">Treapta 9</span>
+                <span class="lesson-title">A ierta cuiva</span>
+            </a>
+        </li>
+  
+        <li>
+            <a href="Treapta 10-A nejudeca pe celalalt.pdf"  target="_blank">
+                <span class="lesson-code">Treapta 10</span>
+                <span class="lesson-title">A nejudeca pe celălalt</span>
+            </a>
+        </li>
+  
+        <li>
+            <a href="Treapta 11-A tacea stiind.pdf" target="_blank">
+                <span class="lesson-code">Treapta 11</span>
+                <span class="lesson-title">A tăcea știind</span>
+            </a>
+        </li>
+    
+       <li>
+            <a href="Treapta 12-A trai realitatea.pdf" target="_blank">
+                <span class="lesson-code">Treapta 12</span>
+                <span class="lesson-title">A trăi realitatea</span>
+            </a>
+        </li>
+
+       <li>
+            <a href="Treapta 13-A lucra sufleteste barbateste continuu.pdf" target="_blank">
+                <span class="lesson-code">Treapta 13</span>
+                <span class="lesson-title">A lucra sufletește bărbătește continuu</span>
+            </a>
+        </li>
+  
+       <li>
+            <a href="Treapta 14-A te infrana de la.pdf" target="_blank">
+                <span class="lesson-code">Treapta 14</span>
+                <span class="lesson-title">A te înfrâna</span>
+            </a>
+        </li>
+  
+       <li>
+            <a href="Treapta 15-A te curati de.pdf" target="_blank">
+                <span class="lesson-code">Treapta 15</span>
+                <span class="lesson-title">A te curăți de</span>
+            </a>
+        </li>
+ 
+        <li>
+            <a href="Treapta 16-A fi fara griji lumesti.pdf" target="_blank">
+                <span class="lesson-code">Treapta 16</span>
+                <span class="lesson-title">A fi fără griji lumești</span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="Treapta 17-A nu-i fi rusine de.pdf" target="_blank">
+                <span class="lesson-code">Treapta 17</span>
+                <span class="lesson-title">A-i fi rușine de</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="Treapta 18-A dormi, a se ruga, a canta in obste.pdf" target="_blank">
+                <span class="lesson-code">Treapta 18</span>
+                <span class="lesson-title">Treapta 18 - A dormi, a te ruga, a cânta în obște</span>
+            </a>
+        </li>
+  
+        <li>
+            <a href="Treapta 19-A priveghea.pdf" target="_blank">
+                <span class="lesson-code">Treapta 19</span>
+                <span class="lesson-title">A priveghea</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="Treapta 20- A fi curajos in fata.pdf" target="_blank">
+                <span class="lesson-code">Treapta 20</span>
+                <span class="lesson-title">A fi curajos față de</span>
+            </a>
+        </li>
+  
+        <li>
+            <a href="Treapta 21- A se regasi deplin pe sine.pdf" target="_blank">
+                <span class="lesson-code">Treapta 21</span>
+                <span class="lesson-title">A fi nesuperficial, a se regăsi deplin pe sine</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="Treapta 22 - A se defaima inaintea Domnului.pdf" target="_blank">
+                <span class="lesson-code">Treapta 22</span>
+                <span class="lesson-title">A se defăima înaintea lui Dumnezeu</span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="Treapta 23 - A dispretui hulirea, a neosandi pe celalalt.pdf" target="_blank">
+                <span class="lesson-code">Treapta 22</span>
+                <span class="lesson-title">A disprețui hulirea, a neosândi pe celălalt</span>
+            </a>
+        </li>
+
+  </ul>
 
 </body>
 </html>
