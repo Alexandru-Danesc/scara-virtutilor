@@ -139,22 +139,24 @@
     }
     
    ul li {
-      font-size: 0.95rem;
-      text-align: center;   /* center text on phone */
-      padding-left: 0;      /* remove left offset */
-    } 
+    font-size: 0.95rem;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 1rem;  /* Add spacing between items */
+  } 
     
    ul li::before {
     display: none;        /* hide bullet on phone */
     }
       
-    ul li a {
-      display: grid;
-      grid-template-columns: 4.5rem 1fr; /* left = codes, right = text */
-      column-gap: 0.75rem;
-      align-items: start;
-      text-align: left;
-    } 
+      ul li a {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr; /* left = code, right = title */
+    column-gap: 0.75rem;
+    align-items: start;  /* aligns items at the top of the cell */
+    text-align: left;
+    row-gap: 0.2rem;     /* optional: add small gap between code & title */
+  }
 
     .treapta-columns {
         column-count: 1; /* single column on small screens */
@@ -175,15 +177,14 @@
   
 
     .lesson-code {
-      font-weight: bold;
-      text-align: right;
-      white-space: nowrap;
-      font-size: 1.2rem; 
-    }
-  
+    font-weight: bold;
+    text-align: right;
+    white-space: nowrap;
+    font-size: 1.2rem;
+  }
     .lesson-title {
-      text-align: left;
-      font-size: 1.2rem;  
+    text-align: left;
+    font-size: 1.2rem;  
   }
 }
 </style>
